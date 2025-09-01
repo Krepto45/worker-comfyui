@@ -6,4 +6,4 @@ RUN comfy node update all
 WORKDIR /comfyui
 
 # Add model paths for runpod (uncomment if you have the file)
-COPY extra_model_paths.yaml ./
+ADD extra_model_paths.yaml ./
