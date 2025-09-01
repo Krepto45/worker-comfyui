@@ -3,9 +3,6 @@ FROM runpod/worker-comfyui:5.4.0-base
 # Update comfyui
 RUN comfy node update all
 
-# Change to comfyui directory
-WORKDIR /comfyui
-
 # Download all models into the docker image using RunPod syntax
 RUN comfy model download --url "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_bf16.safetensors" --relative-path models/diffusion_models --filename "qwen_image_edit_bf16.safetensors"
 
